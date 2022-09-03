@@ -82,11 +82,11 @@ document.getElementById('usagetyperadio').addEventListener('change', calculate);
 document.getElementById('watt_usage').addEventListener('change', calculate);
 document.getElementById('time').addEventListener('change', calculate);
 
-document.getElementById('energyprice').addEventListener('keypress', calculate);
-document.getElementById('kwt_usage').addEventListener('keypress', calculate);
-document.getElementById('nettleie').addEventListener('keypress', calculate);
-document.getElementById('watt_usage').addEventListener('keypress', calculate);
-document.getElementById('time').addEventListener('keypress', calculate);
+document.getElementById('energyprice').addEventListener('keyup', calculate);
+document.getElementById('kwt_usage').addEventListener('keyup', calculate);
+document.getElementById('nettleie').addEventListener('keyup', calculate);
+document.getElementById('watt_usage').addEventListener('keyup', calculate);
+document.getElementById('time').addEventListener('keyup', calculate);
 
 document.getElementById('nettleverador').addEventListener('change', populate_nettleverador);
 
