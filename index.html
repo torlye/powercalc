@@ -3,9 +3,15 @@
 <head>
   <title>Strømkalkulator</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <h1>Strømkalkulator</h1>
+  <div>
+    Kalkulatoren er ment for å beregne pris på bestemte oppgaver; f.eks. lade elbil, kjøre oppvaskmaskin. 
+    Den er ikke egnet for å regne pris over lange tidsperioder, som dager og måneder.
+  </div>
+
   <h2>Forbruk</h2>
   <fieldset id="usagetyperadio">
     <legend>Beregn forbruk fra</legend>
@@ -17,24 +23,31 @@
     <label class="grid-label" for="kwt_usage">Forbruk (kWt)</label>
     <input id="kwt_usage" type="number" value="1" min="0" />
   </div>
+
   <div class="grid-container" id="watttime">
     <label class="grid-label" for="watt_usage">Effekt (watt)</label>
     <input id="watt_usage" type="number" value="0" min="0" />
+
     <label class="grid-label" for="time">Tid (minutter)</label>
     <input id="time" type="number" value="1" min="1" />
   </div>
+
   <h2>Pris</h2>
   <div class="grid-container">
     <label class="grid-label" for="energyprice">Strømpris (øre/kWt uten mva)</label> 
     <input id="energyprice" type="number" value="500" min="0" step="0.01" />
+    
     <label class="grid-label" for="nettleie">Nettleie, forbruksledd (øre/kWt)</label>
     <input id="nettleie" type="number" value="0" min="0" step="0.01" />
+
+    <div class="grid-label"></div>
     <select id="nettleverador" aria-label="Fyll inn forhåndsdefinert pris fra nettleverandør">
       <option value="43.10">Elvia dag</option>
       <option value="36.85">Elvia natt/helg</option>
     </select>
   </div>
   <div>Natt/helg pris gjelder 22:00 til 06:00 hverdager, og hele dagen helg og helligdager.</div>
+
   <h2>Resultat</h2>
   <div class="grid-container">
     <label class="grid-label" for="result">Pris for dette forbruket (kr)</label>
@@ -90,6 +103,7 @@
       </tbody>
     </table>
   </div>
+
   <script src="code.js"></script>
 </body>
 </html>
