@@ -65,8 +65,8 @@ const calculate = () => {
     document.getElementById('result_sum').innerText = formatCurrency(final_per_kwt);
     document.getElementById('result_sum_usage').innerText = formatCurrency(sum);
 
-    const formatted_cost = formatCurrency(sum);
-    document.getElementById('result').innerText = formatted_cost;
+    document.getElementById('result').innerText = formatCurrency(sum);
+    document.getElementById('result_utenstromstotte').innerText = formatCurrency(energyusagetotal + mva);
 }
 
 const populate_nettleverador = (e, foo) => {
